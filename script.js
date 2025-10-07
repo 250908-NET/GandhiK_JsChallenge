@@ -1,13 +1,12 @@
-function sayHello() {
-  alert("Hello from the external file!");
+function greetUser() {
+  let name = document.getElementById("nameInput").value;
+  let color = document.getElementById("colorInput").value;
+  if (name.trim() === "" || color.trim() === "") {
+    alert("Please enter your name first! and color");
+  } else {
+    alert("Hello, " + name + "! Your favorite color is " + color);
+  }
 }
 
-function sayGoodbye() {
-    alert ("Goodbye user");
-}
-// Connect the function to the button
-let btn = document.getElementById("helloBtn");
-btn.addEventListener("click", sayHello);
-
-let btn2 = document.getElementById("goodbyeBtn");
-btn2.addEventListener("click", sayGoodbye);
+document.getElementById("greetBtn").addEventListener("click", greetUser);
+document.getElementById("colorBtn").addEventListener("click", favoriteColor);
