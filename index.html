@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>JS Button Example</title>
+    <title>Greeting Input</title>
   </head>
   <body>
-    <h1>Click the Button!</h1>
-
-    <button onclick="sayHello()">Say Hello</button>
-    <button onclick="tellJoke()">Tell Me a joke</button>
+    <h2>Enter your name:</h2>
+    <input type="text" id="nameInput" placeholder="Your name here">
+    <button onclick="greetUser()">Greet Me</button>
 
     <script>
-      function sayHello() {
-        alert("Hello from JavaScript!");
-      }
-      function tellJoke() {
-        alert("you're not funny")
+      function greetUser() {
+        let name = document.getElementById("nameInput").value;
+        
+        if (!name)
+        {
+          alert("Please enter your first name first")
+        } else {
+          alert("Hello, " + name + "!");
+        }
       }
     </script>
   </body>
