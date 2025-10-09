@@ -1,12 +1,8 @@
-function changeItem() {
-    const img = document.getElementById("myImage");
-    
-    if (img.src.includes("download.jpg"))
-    {
-        img.src = "bmw.avif";
-    }
-    else{
-        img.src = "download.jpg";
-    }
-    
-}
+document.getElementById('btn').addEventListener("click", function()
+{
+    const colors = ["lightblue", "lightgreen", "lightpink", "lightyellow", "lavender"];
+    let index = 0;
+    document.body.style.backgroundColor = "green";
+    document.body.style.backgroundColor = colors[index];
+    index = (index + 1) % colors.length;
+});
